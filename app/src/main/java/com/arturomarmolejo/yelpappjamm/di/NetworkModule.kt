@@ -1,6 +1,6 @@
 package com.arturomarmolejo.yelpappjamm.di
 
-import com.arturomarmolejo.yelpappjamm.rest.YelpApi
+import com.arturomarmolejo.yelpappjamm.service.YelpApi
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module

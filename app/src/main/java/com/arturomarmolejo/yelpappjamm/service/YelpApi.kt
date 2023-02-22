@@ -1,10 +1,9 @@
-package com.arturomarmolejo.yelpappjamm.rest
+package com.arturomarmolejo.yelpappjamm.service
 
 import com.arturomarmolejo.yelpappjamm.model.items.YelpResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
-import java.util.jar.Attributes
 
 //Client ID
 //gMe6k8D_8b_rXlqIMRzk_A
@@ -23,7 +22,7 @@ interface YelpApi {
         @Query("attributes") attributes: String = "hot_and_new",
         @Query("sort_by") sort_by: String = "best_match",
         @Query("limit") limit: Int = 20,
-    ): Response<YelpResponse>
+    ): Response<List<YelpResponse>>
 
     companion object {
         const val BASE_URL = "https://api.yelp.com/v3/businesses/"
