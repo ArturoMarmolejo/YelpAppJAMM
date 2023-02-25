@@ -6,7 +6,7 @@ import com.arturomarmolejo.yelpappjamm.model.domain.DomainBusinesses
 
 @Database(
     entities = [
-        DomainBusinesses::class
+        DomainBusinesses::class,
     ],
     version = 1
 )

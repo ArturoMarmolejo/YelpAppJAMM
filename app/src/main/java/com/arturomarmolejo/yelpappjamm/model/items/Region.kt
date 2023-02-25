@@ -7,5 +7,5 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class Region(
     @Json(name = "center")
-    val center: Center = Center()
+    val center: Center? = Center()
 )

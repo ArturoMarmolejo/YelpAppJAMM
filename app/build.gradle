@@ -92,4 +92,7 @@ dependencies {
     // mockk
     testImplementation "io.mockk:mockk:1.13.4"
 
+    // location services
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
 }

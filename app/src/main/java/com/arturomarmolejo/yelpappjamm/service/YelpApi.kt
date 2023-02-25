@@ -1,5 +1,6 @@
 package com.arturomarmolejo.yelpappjamm.service
 
+import com.arturomarmolejo.yelpappjamm.model.domain.DomainBusinesses
 import com.arturomarmolejo.yelpappjamm.model.items.YelpResponse
 import retrofit2.Response
 import retrofit2.http.GET
@@ -16,13 +17,13 @@ import retrofit2.http.Query
 interface YelpApi {
     @GET(SEARCH)
     suspend fun getHotAndNewRestaurants(
-        @Query("latitude") latitude: Double?,
-        @Query("longitude") longitude: Double,
+        @Query("latitude") latitude: String?,
+        @Query("longitude") longitude: String?,
         @Query("term") term: String = "restaurants",
         @Query("attributes") attributes: String = "hot_and_new",
         @Query("sort_by") sort_by: String = "best_match",
         @Query("limit") limit: Int = 20,
-    ): Response<List<YelpResponse>>
+    ): Response<YelpResponse>
 
     companion object {
         const val BASE_URL = "https://api.yelp.com/v3/businesses/"
